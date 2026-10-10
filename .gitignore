@@ -1,0 +1,14 @@
+# Local working files
+tmp/
+.DS_Store
+Thumbs.db
+
+# Local preview and tool state
+.impeccable/
+.playwright/
+node_modules/
+
+# Editor files
+.vscode/
+.idea/
+*.log

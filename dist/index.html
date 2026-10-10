@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive PhD Economics teaching dashboard for researching and writing a thesis literature review chapter.">
+  <meta name="theme-color" content="#14233d">
+  <title>PhD Economics Literature Review Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to lesson content</a>
+
+  <header class="masthead">
+    <button class="icon-button mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open module menu" aria-expanded="false">☰</button>
+    <div class="brand-block">
+      <span class="brand-kicker">PhD Research Methods · Economics</span>
+      <a class="brand" href="#home" data-link="home">Literature Review Lab</a>
+    </div>
+    <div class="mast-actions">
+      <button class="quiet-button" id="search-toggle" aria-haspopup="dialog">⌕ Search</button>
+      <button class="quiet-button" id="print-page">Print module</button>
+      <div class="progress-pill" aria-label="Course progress"><span id="progress-count">0/14</span><span class="progress-track"><span id="progress-bar"></span></span></div>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Course modules">
+      <div class="sidebar-intro">
+        <p class="eyebrow">Chapter 2 field guide</p>
+        <p>Move from a searchable question to a defensible synthesis, gap, and framework.</p>
+      </div>
+      <nav class="module-nav" id="module-nav">
+        <button class="nav-item active" data-page="home"><span>00</span>Orientation</button>
+        <button class="nav-item" data-page="foundations"><span>01</span>What & why</button>
+        <button class="nav-item" data-page="search"><span>02</span>Search lab</button>
+        <button class="nav-item" data-page="ai-search"><span>03</span>AI search</button>
+        <button class="nav-item" data-page="architecture"><span>04</span>Chapter anatomy</button>
+        <button class="nav-item" data-page="writing"><span>05</span>Synthesis writing</button>
+        <button class="nav-item" data-page="malaysia"><span>06</span>Malaysian studies</button>
+        <button class="nav-item" data-page="gaps"><span>07</span>Gap lab</button>
+        <button class="nav-item" data-page="frameworks"><span>08</span>Framework clinic</button>
+        <button class="nav-item" data-page="matrix"><span>09</span>Evidence matrix</button>
+        <button class="nav-item" data-page="notebook"><span>10</span>Gemini Notebook</button>
+        <button class="nav-item" data-page="journals"><span>11</span>Journal quality</button>
+        <button class="nav-item" data-page="ai-writing"><span>12</span>AI writing clinic</button>
+        <button class="nav-item" data-page="teaching"><span>13</span>Teaching kit</button>
+        <button class="nav-item" data-page="sources"><span>14</span>Sources & glossary</button>
+      </nav>
+      <div class="sidebar-footer">
+        <p><strong>Local-first.</strong> Notes and progress stay in this browser.</p>
+        <button class="text-button" id="reset-progress">Reset progress</button>
+      </div>
+    </aside>
+
+    <main id="main-content" tabindex="-1">
+      <section class="page active" id="page-home" data-title="Orientation">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Evidence before prose</p>
+            <h1>Build Chapter 2 as an argument, not an annotated reading list.</h1>
+            <p class="lede">A PhD literature review explains what the field knows, how it knows it, where explanations disagree, and why the thesis is the next credible step.</p>
+            <div class="hero-actions">
+              <button class="primary-button" data-go="foundations">Start the learning path</button>
+              <button class="secondary-button" data-go="teaching">Open the teaching kit</button>
+            </div>
+          </div>
+          <div class="argument-map" aria-label="Literature review logic from question to contribution">
+            <div class="map-node"><span>01</span><strong>Question</strong><small>Define scope and concepts</small></div>
+            <div class="map-arrow">→</div>
+            <div class="map-node"><span>02</span><strong>Evidence</strong><small>Search, screen, appraise</small></div>
+            <div class="map-arrow">→</div>
+            <div class="map-node"><span>03</span><strong>Synthesis</strong><small>Compare explanations and results</small></div>
+            <div class="map-arrow">→</div>
+            <div class="map-node accent"><span>04</span><strong>Warrant</strong><small>Gap, framework, contribution</small></div>
+          </div>
+        </div>
+
+        <div class="snapshot-strip">
+          <div><strong>15</strong><span>interactive modules</span></div>
+          <div><strong>9</strong><span>editable worksheets</span></div>
+          <div><strong>12</strong><span>prompt patterns</span></div>
+          <div><strong>1</strong><span>worked Malaysian case</span></div>
+        </div>
+
+        <div class="content-grid two-thirds">
+          <article>
+            <p class="section-number">The complete workflow</p>
+            <h2>From broad field to defensible chapter</h2>
+            <ol class="timeline">
+              <li><span>Frame</span><div><strong>Turn the thesis problem into searchable concepts.</strong><p>Define population or unit, phenomenon, mechanisms, outcomes, place, period, and study designs.</p></div></li>
+              <li><span>Find</span><div><strong>Search widely enough to avoid a convenience sample.</strong><p>Combine databases, Google Scholar, review articles, backward/forward citation chaining, key journals, working papers, and Malaysian repositories.</p></div></li>
+              <li><span>Filter</span><div><strong>Apply pre-declared inclusion criteria.</strong><p>Record the database, exact query, date, results, screening reason, and version of every retained work.</p></div></li>
+              <li><span>Map</span><div><strong>Extract comparable evidence.</strong><p>Code theory, mechanism, context, data, identification strategy, variables, findings, limitations, and relevance.</p></div></li>
+              <li><span>Synthesise</span><div><strong>Organise by debate, mechanism, method, or finding.</strong><p>Use chronology only when intellectual change over time is itself part of the argument.</p></div></li>
+              <li><span>Position</span><div><strong>Make the gap and framework earn their place.</strong><p>Show what remains unresolved and how the thesis design resolves or narrows it.</p></div></li>
+            </ol>
+          </article>
+          <aside class="margin-panel">
+            <p class="eyebrow">Professor's source notes</p>
+            <h3>The inherited teaching spine</h3>
+            <ul class="tick-list">
+              <li>Ask “What has been done?” before claiming novelty.</li>
+              <li>Do not reinvent the wheel; identify variables, methods, strengths, and weaknesses.</li>
+              <li>Use thematic and funnelled writing.</li>
+              <li>Distinguish references (cited) from bibliography (read).</li>
+              <li>Snowball from recent reviews and seminal papers.</li>
+              <li>Keep searching; use alerts and key-journal monitoring.</li>
+            </ul>
+            <p class="small">Adapted from the three lecture-note files supplied with this project.</p>
+          </aside>
+        </div>
+
+        <div class="module-footer">
+          <p>Recommended next: clarify what a literature review must accomplish.</p>
+          <button class="primary-button" data-go="foundations">Continue to What & why →</button>
+        </div>
+      </section>
+
+      <section class="page" id="page-foundations" data-title="What & why">
+        <div class="page-heading">
+          <p class="section-number">Module 01</p>
+          <h1>What a literature review is—and is not</h1>
+          <p class="lede">The chapter is a reasoned synthesis of an evidence field. Its unit of organisation is the problem or debate, not the paper.</p>
+        </div>
+        <div class="definition-band">
+          <p>A literature review <strong>searches, selects, appraises, compares, and synthesises</strong> prior knowledge to establish the thesis's conceptual position, empirical warrant, and research design.</p>
+        </div>
+        <div class="comparison-table" role="table" aria-label="Literature review is and is not">
+          <div class="comparison-head" role="row"><span>It is</span><span>It is not</span></div>
+          <div role="row"><span>A map of explanations, evidence, and unresolved tensions.</span><span>A paragraph-by-paragraph list of who said what.</span></div>
+          <div role="row"><span>A transparent account of how the evidence base was found and bounded.</span><span>Whatever papers happened to appear first in Scholar.</span></div>
+          <div role="row"><span>A critical appraisal of claims relative to designs and contexts.</span><span>A ritual complaint that every study has “small sample size.”</span></div>
+          <div role="row"><span>A bridge from theory and evidence to research questions and methods.</span><span>A detached history chapter that never reaches the thesis.</span></div>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>Why a PhD needs it</h2>
+            <dl class="purpose-list">
+              <div><dt>Orient</dt><dd>Define the vocabulary, constructs, boundaries, and schools of thought.</dd></div>
+              <div><dt>Accumulate</dt><dd>Show which findings are robust, conditional, disputed, or missing.</dd></div>
+              <div><dt>Interrogate</dt><dd>Separate evidence from assertion and design limits from substantive disagreement.</dd></div>
+              <div><dt>Position</dt><dd>Demonstrate the thesis's incremental, theoretical, empirical, contextual, or methodological contribution.</dd></div>
+              <div><dt>Design</dt><dd>Justify variables, mechanisms, identification, data, cases, and measures.</dd></div>
+            </dl>
+          </article>
+          <article>
+            <h2>Choose the review mode</h2>
+            <div class="mode-list">
+              <details open><summary>Narrative critical review</summary><p>Best for a thesis chapter that must reconstruct debates, theories, and evidence across heterogeneous designs. Still document the search and selection process.</p></details>
+              <details><summary>Systematic review</summary><p>Use when the question, eligibility rules, searches, screening, and synthesis can be made reproducible. Use PRISMA 2020 and PRISMA-S as reporting guides; do not claim “systematic” merely because many papers were read.</p></details>
+              <details><summary>Scoping review</summary><p>Use to map concepts, evidence types, and research activity when the field is broad or emerging. It is not a shortcut for weak critical appraisal.</p></details>
+              <details><summary>Meta-analysis</summary><p>Use when comparable effect estimates can be statistically combined and heterogeneity can be modelled. It is a synthesis method, not a synonym for literature review.</p></details>
+            </div>
+          </article>
+        </div>
+
+        <div class="seminar-task">
+          <div><p class="eyebrow">Five-minute diagnostic</p><h3>Defend the review design</h3><p>Write one sentence naming your review mode and one sentence explaining why it matches your question and evidence.</p></div>
+          <textarea data-save="foundation-diagnostic" aria-label="Review design diagnostic" placeholder="This thesis uses a critical narrative review because…"></textarea>
+        </div>
+      </section>
+
+      <section class="page" id="page-search" data-title="Search lab">
+        <div class="page-heading">
+          <p class="section-number">Module 02</p>
+          <h1>Search like an economist, document like an auditor</h1>
+          <p class="lede">Discovery can be exploratory. The final search must be reproducible enough that a reader can see what was in scope and what could have been missed.</p>
+        </div>
+
+        <div class="content-grid two-thirds">
+          <article>
+            <h2>The six-pass search</h2>
+            <ol class="step-list">
+              <li><strong>Scope.</strong> Translate the research problem into 3–5 concept blocks: phenomenon, outcome, mechanism, population/unit, geography.</li>
+              <li><strong>Seed.</strong> Locate recent review articles, handbook chapters, seminal papers, and key Malaysian studies.</li>
+              <li><strong>Search.</strong> Run adapted strings in EconLit, Scopus/Web of Science, disciplinary databases, repositories, and Scholar.</li>
+              <li><strong>Chain.</strong> Search backward through references and forward through “Cited by”; use “Related articles” to find semantic neighbours.</li>
+              <li><strong>Screen.</strong> Apply inclusion/exclusion criteria first to title/abstract, then full text. Record one defensible reason per exclusion.</li>
+              <li><strong>Refresh.</strong> Re-run the search near submission; set alerts for core queries, authors, and journals.</li>
+            </ol>
+          </article>
+          <aside class="margin-panel">
+            <h3>Search record minimum</h3>
+            <ul class="tick-list">
+              <li>Database and platform</li>
+              <li>Exact query as run</li>
+              <li>Date searched</li>
+              <li>Fields and filters</li>
+              <li>Results exported</li>
+              <li>Duplicates removed</li>
+              <li>Eligibility rule</li>
+              <li>Screening decision</li>
+            </ul>
+            <p class="small">PRISMA-S provides 16 reporting items for literature searches. Use it as a transparency checklist even when the thesis review is not a full systematic review.</p>
+          </aside>
+        </div>
+
+        <div class="workbench" id="query-builder">
+          <div class="workbench-head"><div><p class="eyebrow">Google Scholar query builder</p><h2>Build a concept-block query</h2></div><span class="status-chip">Interactive</span></div>
+          <div class="builder-grid">
+            <label>Phenomenon or exposure<textarea id="concept-a" placeholder='minimum wage | "minimum wage increase"'>minimum wage | "minimum wage increase"</textarea></label>
+            <label>Outcome<textarea id="concept-b" placeholder='employment | unemployment | informality'>employment | unemployment | informality</textarea></label>
+            <label>Context<textarea id="concept-c" placeholder='Malaysia | Malaysian'>Malaysia | Malaysian</textarea></label>
+            <label>Optional exclusions<input id="concept-x" value="review thesis" placeholder="terms to exclude, space separated"></label>
+          </div>
+          <div class="query-output"><code id="scholar-query"></code><button class="copy-button" data-copy-target="scholar-query">Copy query</button></div>
+          <p class="small">In Scholar, spaces imply AND; capitalised OR (or <code>|</code>) broadens; quotes preserve a phrase; a minus sign excludes a term. Long nested database strings may behave unpredictably, so test each block and inspect whether known “sentinel” papers appear.</p>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>Google Scholar Boolean field manual</h2>
+            <ol class="compact-steps">
+              <li><strong>Start short.</strong> Use 2–4 core ideas, not the full research question.</li>
+              <li><strong>Phrase.</strong> Put stable multiword terms in quotation marks.</li>
+              <li><strong>Synonyms.</strong> Join variants with capitalised <code>OR</code>.</li>
+              <li><strong>Exclude sparingly.</strong> Use <code>-term</code>; each exclusion risks removing relevant papers.</li>
+              <li><strong>Target.</strong> Try <code>author:"name"</code>, an exact title in quotes, or Advanced Search for author, title, publication, and year fields.</li>
+              <li><strong>Retrieve.</strong> Check [PDF]/[HTML], library links, “All versions,” institutional repositories, and lawful author copies.</li>
+              <li><strong>Chain.</strong> Use “Cited by,” “Related articles,” and reference lists.</li>
+              <li><strong>Monitor.</strong> Create an email alert and rerun the dated search before submission.</li>
+            </ol>
+            <p class="source-line">Guide: <a href="https://scholar.google.com/intl/en/scholar/help.html" target="_blank" rel="noreferrer">Google Scholar Search Help</a></p>
+          </article>
+          <article>
+            <h2>Worked search: B40 food expenditure</h2>
+            <div class="worked-block">
+              <p><strong>Question.</strong> How do food-price changes affect food expenditure and diet adjustment among B40 households in Malaysia?</p>
+              <p><strong>Blocks.</strong> price/inflation · expenditure/consumption/diet · B40/low-income/household · Malaysia.</p>
+              <code>("food price" OR "food inflation") (expenditure OR consumption OR diet) (B40 OR "low income" OR household) Malaysia</code>
+              <p><strong>Iteration.</strong> If B40 is too restrictive, remove it, screen on Malaysian household samples, then search <code>author:</code> for recurring DOSM/HES researchers.</p>
+              <p><strong>Sentinel check.</strong> The query should retrieve at least one known Malaysian household-expenditure study and one paper using Household Expenditure Survey data.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="worksheet">
+          <div><p class="eyebrow">Worksheet 1</p><h2>Search protocol</h2></div>
+          <div class="worksheet-grid">
+            <label>Review question<textarea data-save="search-question" placeholder="Population/unit + phenomenon + outcome + context"></textarea></label>
+            <label>Inclusion criteria<textarea data-save="search-include" placeholder="Years, geography, designs, languages, publication types…"></textarea></label>
+            <label>Databases and repositories<textarea data-save="search-databases" placeholder="EconLit, Scopus, Scholar, MySitasi, institutional repositories…"></textarea></label>
+            <label>Exclusion criteria<textarea data-save="search-exclude" placeholder="State rules before screening; avoid outcome-driven exclusions."></textarea></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-ai-search" data-title="AI search">
+        <div class="page-heading">
+          <p class="section-number">Module 03</p>
+          <h1>Use AI to widen and interrogate—not to invent—the evidence base</h1>
+          <p class="lede">AI is useful for query expansion, screening support, extraction, comparison, and challenge. Bibliographic facts and substantive claims still require source-level verification.</p>
+        </div>
+
+        <div class="guardrail-band">
+          <div><strong>AI may propose</strong><span>synonyms, JEL terms, screening labels, comparison axes, counterarguments</span></div>
+          <div><strong>The researcher must verify</strong><span>existence, DOI, authorship, year, sample, method, estimate, quotation, and interpretation</span></div>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>A source-grounded AI workflow</h2>
+            <ol class="step-list">
+              <li><strong>Plan without citations.</strong> Ask AI to decompose the question into concepts, synonyms, mechanisms, JEL codes, and candidate inclusion rules.</li>
+              <li><strong>Search outside the chatbot.</strong> Use the terms in scholarly databases and export real records.</li>
+              <li><strong>Ground.</strong> Upload lawfully obtained papers or abstracts to a source-grounded tool; constrain answers to selected sources.</li>
+              <li><strong>Extract with evidence.</strong> Require page/section pointers and “not reported” instead of guesses.</li>
+              <li><strong>Adversarial check.</strong> Ask what evidence contradicts the emerging story, which contexts differ, and what design limitations change inference.</li>
+              <li><strong>Audit.</strong> Randomly verify cells, quotations, and classifications; keep a correction log.</li>
+            </ol>
+          </article>
+          <article>
+            <h2>Tool roles, not tool worship</h2>
+            <div class="tool-role"><span>Discovery</span><p>Scholar, EconLit, Scopus/Web of Science, Semantic Scholar feeds, citation networks.</p></div>
+            <div class="tool-role"><span>Management</span><p>Zotero or another reference manager: deduplicate, tag, attach files, cite, and preserve metadata.</p></div>
+            <div class="tool-role"><span>Grounded analysis</span><p>Gemini Notebook: compare the sources you selected, generate tables and mind maps, then verify each output against citations.</p></div>
+            <div class="tool-role"><span>Writing support</span><p>Outline, test structure, identify unsupported transitions, or revise clarity after the researcher's claims are fixed.</p></div>
+          </article>
+        </div>
+
+        <div class="prompt-studio">
+          <div class="workbench-head"><div><p class="eyebrow">Prompt studio</p><h2>Compose a high-control LR prompt</h2></div><button class="copy-button" data-copy-target="generated-prompt">Copy prompt</button></div>
+          <div class="prompt-controls">
+            <label>Task<select id="prompt-task"><option value="search">Search strategy</option><option value="matrix">Evidence matrix</option><option value="synthesis">Synthesis paragraph</option><option value="gap">Gap audit</option><option value="critique">Adversarial critique</option></select></label>
+            <label>Topic<input id="prompt-topic" value="food-price changes and B40 household expenditure in Malaysia"></label>
+            <label>Evidence boundary<select id="prompt-boundary"><option>Only the sources I provide</option><option>Verified bibliographic records plus my sources</option></select></label>
+          </div>
+          <pre id="generated-prompt" class="prompt-output"></pre>
+        </div>
+
+        <details class="prompt-library" open><summary>Complete prompt: source-grounded chapter synthesis</summary><div class="prompt-card"><button class="copy-button" data-copy-target="prompt-full-synthesis">Copy</button><pre id="prompt-full-synthesis">ROLE: Act as a critical economics literature-review assistant. Do not write as an authority beyond the supplied evidence.
+
+OBJECTIVE: Help me construct a synthesis for [SUBSECTION] on [TOPIC] that leads to [RESEARCH QUESTION].
+
+EVIDENCE BOUNDARY: Use only the sources I provide. Do not invent or complete missing citations. If a fact is absent, write “not reported”. Attach a source name and page/section pointer to every substantive claim.
+
+ANALYTICAL TASKS:
+1. Group studies by mechanism, theoretical prediction, identification strategy, context, and direction of finding—not by author.
+2. Separate descriptive association, causal evidence, model-based simulation, and theoretical proposition.
+3. Identify genuine convergence, conditional agreement, contradiction, and incomparable evidence.
+4. Explain whether disagreement is plausibly due to data period, sample, measurement, institutional context, functional form, or identification.
+5. Identify what the evidence cannot establish.
+6. Draft a synthesis outline using claim → comparative evidence → interpretation → implication → bridge.
+
+OUTPUT:
+A. Evidence map table.
+B. Three candidate synthesis claims, each with support and counter-evidence.
+C. A 250-word draft labelled “provisional” with citations in [APA 7].
+D. Verification checklist listing every claim I must inspect in the original source.
+
+QUALITY RULES: Preserve uncertainty and effect direction. Do not call a correlation causal. Do not use fabricated quotations, DOI, page numbers, sample sizes, or coefficients. Avoid stock phrases such as “it is important to note,” “delve,” and “this underscores”.</pre></div></details>
+
+        <div class="warning-note"><strong>Rule of custody:</strong> Never upload confidential manuscripts, restricted microdata, identifiable respondent material, or copyrighted files when licence or institutional policy does not permit it. Record the tool, date, purpose, prompt, sources, and verification performed.</div>
+      </section>
+
+      <section class="page" id="page-architecture" data-title="Chapter anatomy">
+        <div class="page-heading">
+          <p class="section-number">Module 04</p>
+          <h1>A Chapter 2 architecture that moves from field to thesis</h1>
+          <p class="lede">A strong sequence is not universal, but every section should answer a different question and narrow toward the study's design.</p>
+        </div>
+
+        <div class="chapter-stack">
+          <article><span>2.1</span><div><h2>Introduction and scope</h2><p>State the chapter's purpose, boundaries, review approach, and organising logic. Preview the debates—not the conclusion in full.</p><p class="example-line"><strong>Model opening:</strong> “This chapter reviews theoretical and empirical explanations for household adjustment to food-price shocks, with particular attention to distributional heterogeneity and Malaysia's B40 classification.”</p></div></article>
+          <article><span>2.2</span><div><h2>Concepts and topical context</h2><p>Define contested constructs, units, and institutional features. Avoid turning this into a dictionary: compare definitions and justify the one used.</p></div></article>
+          <article><span>2.3</span><div><h2>Theoretical literature</h2><p>Present the mechanisms that generate predictions. Compare assumptions, scope conditions, and competing propositions; derive observable implications.</p></div></article>
+          <article><span>2.4</span><div><h2>International empirical evidence</h2><p>Synthesise by mechanism, design, outcome, or debate. Explain why estimates differ and which evidence is most informative for the thesis.</p></div></article>
+          <article><span>2.5</span><div><h2>Malaysian and institutional evidence</h2><p>Move from transferable international mechanisms to Malaysia's institutions, data, policy, and population. Do not isolate local work as a ceremonial list.</p></div></article>
+          <article><span>2.6</span><div><h2>Method and measurement literature</h2><p>Locate here when methodological choices shape the substantive debate; otherwise justify them in Chapter 3 and cross-reference.</p></div></article>
+          <article><span>2.7</span><div><h2>Synthesis and literature gap</h2><p>State what is known, where inference stops, why the unresolved issue matters, and exactly how the thesis addresses it.</p></div></article>
+          <article><span>2.8</span><div><h2>Framework and propositions</h2><p>Integrate theory, concepts, variables, context, and expected relationships. Ensure every arrow has a written mechanism and later measurement plan.</p></div></article>
+          <article><span>2.9</span><div><h2>Chapter summary</h2><p>Summarise the argument—not each section—and hand the reader to the research design.</p></div></article>
+        </div>
+
+        <div class="structure-note">
+          <p><strong>Alternative inherited from the lecture notes:</strong> a theory-led brain-drain chapter can move from human capital and random utility theory → early and continuing debates → brain-gain hypothesis → datasets → theoretical models of nonreturn → empirical determinants → variable selection. The organising principle is intellectual dependency, not a compulsory template.</p>
+        </div>
+      </section>
+
+      <section class="page" id="page-writing" data-title="Synthesis writing">
+        <div class="page-heading">
+          <p class="section-number">Module 05</p>
+          <h1>Write across studies, not down a bibliography</h1>
+          <p class="lede">The paragraph's first sentence should usually make a literature-level claim. Citations then support, qualify, or challenge it.</p>
+        </div>
+
+        <div class="before-after">
+          <article class="bad-example"><div class="label">Weak: catalogue</div><p>Author A (2019) studied minimum wages and employment. Author B (2020) studied minimum wages and employment. Author C (2022) examined Malaysia and found a significant result. Author D (2023) also studied youth.</p><ul><li>No organising claim</li><li>No comparison of designs or contexts</li><li>“Significant” without magnitude or direction</li><li>Thesis relevance is invisible</li></ul></article>
+          <article class="good-example"><div class="label">Stronger: synthesis</div><p>Estimates of youth employment responses to minimum-wage increases depend heavily on how studies address policy endogeneity and labour-market adjustment. Designs exploiting subnational timing tend to identify short-run employment effects, whereas firm- or worker-level panels reveal adjustment through hours, turnover, and formality. Malaysian evidence is especially difficult to compare because national wage floors changed alongside sectoral and regional conditions; the relevant gap is therefore not another average association, but credible identification of heterogeneous adjustment among low-wage youth.</p><ul><li>Claim leads</li><li>Methods explain disagreement</li><li>Context narrows the inference</li><li>Gap follows from the synthesis</li></ul></article>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>The CECIB paragraph</h2>
+            <dl class="acronym-list">
+              <div><dt>C</dt><dd><strong>Claim:</strong> a literature-level proposition.</dd></div>
+              <div><dt>E</dt><dd><strong>Evidence:</strong> multiple relevant studies, weighted by design.</dd></div>
+              <div><dt>C</dt><dd><strong>Comparison:</strong> agreement, contrast, condition, or evolution.</dd></div>
+              <div><dt>I</dt><dd><strong>Interpretation:</strong> why evidence differs and what it can establish.</dd></div>
+              <div><dt>B</dt><dd><strong>Bridge:</strong> implication for the next debate or the thesis.</dd></div>
+            </dl>
+          </article>
+          <article>
+            <h2>Funnel at three scales</h2>
+            <ol class="compact-steps">
+              <li><strong>Chapter:</strong> broad problem → theories → international evidence → Malaysian context → gap → framework.</li>
+              <li><strong>Section:</strong> dominant explanation → alternatives → boundary conditions → unresolved issue.</li>
+              <li><strong>Paragraph:</strong> synthesis claim → evidence → comparison → interpretation → bridge.</li>
+            </ol>
+            <div class="warning-note"><strong>Do not confuse criticism with negativity.</strong> A critical review judges what a claim is warranted to mean, given the data, design, measurement, and context.</div>
+          </article>
+        </div>
+
+        <div class="seminar-task">
+          <div><p class="eyebrow">Rewrite clinic</p><h3>Turn four authors into one argument</h3><p>Draft a CECIB paragraph. Use at least one contrast connector and one design-based explanation.</p></div>
+          <textarea data-save="synthesis-rewrite" aria-label="Synthesis rewrite exercise" placeholder="Across the four studies, evidence suggests…"></textarea>
+        </div>
+      </section>
+
+      <section class="page" id="page-malaysia" data-title="Malaysian studies">
+        <div class="page-heading">
+          <p class="section-number">Module 06</p>
+          <h1>Write Malaysian literature as an analytical context, not a geographic appendix</h1>
+          <p class="lede">The local review should show which mechanisms travel, which are institution-specific, what Malaysian data can identify, and why the thesis's context changes the inference.</p>
+        </div>
+
+        <div class="malaysia-funnel" aria-label="International to Malaysian literature funnel">
+          <div><span>1</span><strong>International regularity</strong><p>What mechanism or empirical pattern appears across settings?</p></div>
+          <div><span>2</span><strong>Institutional translation</strong><p>How do Malaysian policy, labour-market, demographic, spatial, and data institutions alter it?</p></div>
+          <div><span>3</span><strong>Local evidence</strong><p>What have Malaysian studies measured, with which designs and populations?</p></div>
+          <div><span>4</span><strong>Comparative limit</strong><p>Where do scope, measurement, period, or identification prevent a firm conclusion?</p></div>
+          <div><span>5</span><strong>Thesis warrant</strong><p>What exact uncertainty remains, and how will this study reduce it?</p></div>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>Worked paragraph anatomy</h2>
+            <p class="annotated-paragraph"><mark data-note="Scope">Only a small Malaysian literature examines household responses to severe flood risk.</mark> <mark data-note="Compare">Existing studies converge on the importance of preparedness and information, but examine different actors: victims, emergency agencies, and community-warning systems.</mark> <mark data-note="Limit">Because most evidence concerns floods of typical magnitude and relies on reported experience, it does not establish whether behaviour transfers to rarer compound disasters.</mark> <mark data-note="Bridge">International evacuation studies offer testable mechanisms—risk perception, notice, shelter access, and household constraints—but their institutional settings cannot be imported unchanged.</mark></p>
+            <p class="small">Adapted and paraphrased from the Malaysian flood-literature example in the supplied lecture notes.</p>
+          </article>
+          <article>
+            <h2>Malaysia-specific search layer</h2>
+            <ul class="tick-list">
+              <li>Search Malaysia, Malaysian, state names, and institutional terms separately.</li>
+              <li>Check DOSM, Bank Negara Malaysia, ministries, parliamentary and policy reports, and university repositories.</li>
+              <li>Use MySitasi/MyCite lineage to inspect Malaysian scholarly journals, but still appraise journal practices and article quality.</li>
+              <li>Search authors and research groups when local terminology differs from international keywords.</li>
+              <li>Record whether local evidence is peer-reviewed, working paper, thesis, report, or administrative documentation.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="worksheet">
+          <div><p class="eyebrow">Worksheet 2</p><h2>Transferability audit</h2></div>
+          <div class="worksheet-grid">
+            <label>International mechanism<textarea data-save="my-mechanism" placeholder="What causal or behavioural mechanism may travel?"></textarea></label>
+            <label>Malaysian institution<textarea data-save="my-institution" placeholder="Which policy, market, demographic, or data feature changes it?"></textarea></label>
+            <label>Local evidence boundary<textarea data-save="my-boundary" placeholder="What populations, periods, states, outcomes, and designs exist?"></textarea></label>
+            <label>Resulting thesis need<textarea data-save="my-warrant" placeholder="What exactly remains uncertain in Malaysia?"></textarea></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-gaps" data-title="Gap lab">
+        <div class="page-heading">
+          <p class="section-number">Module 07</p>
+          <h1>A gap is a warranted unresolved problem—not “few studies exist”</h1>
+          <p class="lede">The review must establish the gap, its consequence for knowledge or policy, and why the proposed study can address it.</p>
+        </div>
+
+        <div class="gap-grid">
+          <article><span>Evidence</span><h3>Missing or thin evidence</h3><p>A relevant population, period, outcome, or institution has not been credibly studied.</p><small>Test: would one more descriptive paper fill it?</small></article>
+          <article><span>Contradiction</span><h3>Unresolved disagreement</h3><p>Findings point in different directions and the source of heterogeneity is not understood.</p><small>Test: are studies actually comparable?</small></article>
+          <article><span>Method</span><h3>Identification or measurement</h3><p>Prior designs cannot distinguish competing explanations, or key constructs are measured poorly.</p><small>Test: does your design materially improve inference?</small></article>
+          <article><span>Theory</span><h3>Mechanism or boundary</h3><p>A theory does not specify the context in which its prediction holds, or rival theories imply similar observed patterns.</p><small>Test: what observable implication separates them?</small></article>
+          <article><span>Context</span><h3>Institutional transferability</h3><p>Evidence comes from settings whose institutions differ in ways that matter to the mechanism.</p><small>Test: explain why place changes theory—not merely that it is new.</small></article>
+          <article><span>Integration</span><h3>Disconnected literatures</h3><p>Two bodies of work study connected mechanisms but do not speak to each other.</p><small>Test: does integration produce a new prediction?</small></article>
+          <article><span>Temporal</span><h3>Structural change</h3><p>Technology, policy, shocks, or institutions make older relationships uncertain.</p><small>Test: specify what changed and when.</small></article>
+          <article><span>Implementation</span><h3>Knowledge–action gap</h3><p>Effects are known, but adoption, scale, incidence, or political-economy constraints remain unclear.</p><small>Test: is the question researchable rather than advisory?</small></article>
+        </div>
+
+        <div class="formula-band"><strong>Gap claim =</strong><span>established pattern</span><b>+</b><span>bounded limitation or tension</span><b>+</b><span>consequence</span><b>+</b><span>researchable response</span></div>
+
+        <div class="before-after compact">
+          <article class="bad-example"><div class="label">Weak gap</div><p>There are few studies on food prices and B40 households in Malaysia. Therefore, this study fills the gap.</p></article>
+          <article class="good-example"><div class="label">Defensible gap</div><p>Malaysian expenditure studies document food-budget pressure, but aggregate Engel-curve estimates do not identify whether households adjust quantities, quality, or category composition when prices change. This limits distributional policy design because equal expenditure changes can conceal unequal nutritional responses. The thesis addresses this measurement and mechanism gap by linking item-level prices to household expenditure shares across income groups.</p></article>
+        </div>
+
+        <div class="gap-audit workbench">
+          <div class="workbench-head"><div><p class="eyebrow">Gap stress test</p><h2>Can the proposed gap survive five objections?</h2></div><span id="gap-score" class="status-chip">0/5</span></div>
+          <label class="check-row"><input type="checkbox" class="gap-check"> The gap is derived from synthesised evidence, not database hit counts.</label>
+          <label class="check-row"><input type="checkbox" class="gap-check"> The missing knowledge changes theory, inference, measurement, or a consequential decision.</label>
+          <label class="check-row"><input type="checkbox" class="gap-check"> The thesis design can address the gap with available data and identification.</label>
+          <label class="check-row"><input type="checkbox" class="gap-check"> The claim states its boundary (population, context, period, outcome, method).</label>
+          <label class="check-row"><input type="checkbox" class="gap-check"> A reasonable reader cannot refute it with one obvious paper or alternate keyword.</label>
+        </div>
+      </section>
+
+      <section class="page" id="page-frameworks" data-title="Framework clinic">
+        <div class="page-heading">
+          <p class="section-number">Module 08</p>
+          <h1>Choose the framework for the job</h1>
+          <p class="lede">Framework labels are used inconsistently across disciplines. Define what the figure does, then ensure its nodes and arrows correspond to written mechanisms, measures, and methods.</p>
+        </div>
+
+        <div class="framework-table">
+          <div class="framework-row head"><span>Framework</span><span>Primary question</span><span>Contains</span><span>Use when</span></div>
+          <div class="framework-row"><strong>Theoretical</strong><span>Which formal or established explanation generates the prediction?</span><span>Theory, assumptions, mechanisms, propositions</span><span>The study tests, extends, contrasts, or operationalises theory.</span></div>
+          <div class="framework-row"><strong>Conceptual</strong><span>How are the study's constructs expected to relate?</span><span>Constructs, pathways, moderators, context</span><span>Several theories or empirical insights must be integrated.</span></div>
+          <div class="framework-row"><strong>Analytical</strong><span>How will evidence be interpreted or decomposed?</span><span>Categories, dimensions, mechanisms, decision rules</span><span>The study needs a lens for qualitative, policy, institutional, or mixed evidence.</span></div>
+          <div class="framework-row"><strong>Research</strong><span>How do problem, questions, data, methods, outputs, and contribution align?</span><span>RQ/RO, data, method, analysis, output, outcome</span><span>A proposal or thesis needs an end-to-end roadmap.</span></div>
+        </div>
+
+        <div class="workbench framework-picker">
+          <div class="workbench-head"><div><p class="eyebrow">Decision aid</p><h2>If you may show only one framework</h2></div><span class="status-chip">Recommendation</span></div>
+          <div class="prompt-controls">
+            <label>Main intellectual task<select id="fw-task"><option value="test">Test or extend an established theory</option><option value="integrate">Integrate constructs from several literatures</option><option value="interpret">Interpret qualitative or policy evidence</option><option value="align">Show the whole research design</option></select></label>
+            <label>Study style<select id="fw-style"><option value="quant">Quantitative causal/associational</option><option value="mixed">Mixed methods</option><option value="qual">Qualitative/institutional</option></select></label>
+          </div>
+          <div class="recommendation" id="fw-recommendation"></div>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>Default rule when only one is permitted</h2>
+            <p>Use an <strong>integrated conceptual framework grounded explicitly in theory</strong>. It is usually the most informative single figure because it can show constructs, expected relationships, mechanisms, moderators, and context while citing the theories that justify them.</p>
+            <p>Exception: if the thesis contribution is a direct formal test or extension of one theory, use the theoretical framework. If the institution requires a “research framework,” retain that label but build a theory-grounded conceptual core and explain the terminology.</p>
+          </article>
+          <article>
+            <h2>Arrow audit</h2>
+            <ul class="tick-list">
+              <li>Every arrow has a mechanism stated in prose.</li>
+              <li>Every construct has an operational definition later.</li>
+              <li>Direction and feedback are intentional.</li>
+              <li>Mediators, moderators, controls, and outcomes are not conflated.</li>
+              <li>No decorative variable appears only because a past study used it.</li>
+              <li>The empirical design can evaluate the relationships shown.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="theory-map">
+          <p class="eyebrow">Worked example from the supplied notes</p>
+          <h2>Wage determination: theory → concept → variable</h2>
+          <div class="theory-columns">
+            <div><h3>Theory or model</h3><p>Human capital / Mincer earnings</p><p>Hedonic wage theory</p><p>On-the-job training</p><p>Labour-market discrimination</p><p>Monopoly union model</p></div>
+            <div><h3>Concept</h3><p>Human-capital investment</p><p>Working conditions</p><p>Training accumulation</p><p>Minority-group penalty</p><p>Union bargaining</p></div>
+            <div><h3>Candidate operationalisation</h3><p>Years/level of education</p><p>Occupation risk or job attributes</p><p>Training duration</p><p>Gender, ethnicity, citizenship</p><p>Union membership</p></div>
+          </div>
+          <p class="small">Variables do not “come from the literature” in the abstract; they operationalise theoretically meaningful concepts within a specified empirical design.</p>
+        </div>
+      </section>
+
+      <section class="page" id="page-matrix" data-title="Evidence matrix">
+        <div class="page-heading">
+          <p class="section-number">Module 09</p>
+          <h1>The evidence matrix is a thinking instrument</h1>
+          <p class="lede">A useful matrix makes studies comparable and exposes patterns. A giant table of copied abstracts merely relocates the reading problem.</p>
+        </div>
+
+        <div class="matrix-guidance">
+          <div><strong>Bibliographic</strong><span>Author, year, title, outlet, DOI/URL</span></div>
+          <div><strong>Substantive</strong><span>Question, theory, mechanism, context</span></div>
+          <div><strong>Design</strong><span>Data, sample, period, identification, variables</span></div>
+          <div><strong>Inference</strong><span>Finding, magnitude, uncertainty, limitation</span></div>
+          <div><strong>Synthesis</strong><span>Theme, contradiction, relevance, quote/page</span></div>
+        </div>
+
+        <div class="matrix-toolbar"><button class="primary-button" id="add-matrix-row">+ Add study</button><button class="secondary-button" id="download-matrix">Download CSV</button><button class="text-button" id="clear-matrix">Clear editable rows</button></div>
+        <div class="table-wrap">
+          <table id="evidence-matrix">
+            <thead><tr><th>Study</th><th>Question / theory</th><th>Context & data</th><th>Design</th><th>Finding</th><th>Limitation / use</th></tr></thead>
+            <tbody>
+              <tr class="example-row"><td><strong>Illustrative A</strong><br>Household price response</td><td>Consumer demand; substitution and income effects</td><td>Malaysia HES; B40 households</td><td>Demand system; repeated cross-sections</td><td>Food shares rise as budgets tighten; category responses differ</td><td>Association/structure depends on price measurement; motivates item-level linkage</td></tr>
+              <tr class="example-row"><td><strong>Illustrative B</strong><br>Food-price shock</td><td>Vulnerability and consumption smoothing</td><td>Regional household panel</td><td>Panel fixed effects / shock exposure</td><td>Adjustment occurs through quantity and quality margins</td><td>Institutional transfer to Malaysia uncertain; supplies mechanism and outcomes</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">Illustrative rows demonstrate the schema; they are not bibliographic records and must not be cited as studies.</p>
+
+        <div class="content-grid equal">
+          <article><h2>Matrix rules</h2><ul class="tick-list"><li>One row per study or analytically distinct result.</li><li>Use standardised labels; preserve effect direction and unit.</li><li>Write “not reported,” never infer missing sample or method details.</li><li>Keep a locator for every quotation or numerical claim.</li><li>Code relevance to a planned synthesis claim.</li><li>Audit a random sample after any AI-assisted extraction.</li></ul></article>
+          <article><h2>From matrix to prose</h2><ol class="compact-steps"><li>Filter one theme or mechanism.</li><li>Sort by design strength or context—not alphabetically.</li><li>Mark convergence, contradiction, and incomparable evidence.</li><li>Write a claim that survives the counter-evidence.</li><li>Cite representative and decisive studies, not every row mechanically.</li></ol></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-notebook" data-title="Gemini Notebook">
+        <div class="page-heading">
+          <p class="section-number">Module 10</p>
+          <h1>Gemini Notebook: build matrices and mind maps from controlled sources</h1>
+          <p class="lede">Google renamed NotebookLM to <strong>Gemini Notebook</strong> in July 2026. The workflow remains source-grounded: you select the corpus, generate an artefact, then verify every important claim.</p>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <p class="eyebrow">Tutorial A</p>
+            <h2>Create an LR summary table</h2>
+            <ol class="step-list">
+              <li>Create one notebook for one review question or coherent subtopic.</li>
+              <li>Upload the final screened PDFs/records; use clear filenames such as <code>Author_Year_ShortTitle.pdf</code>.</li>
+              <li>In Sources, select only the papers for the current comparison.</li>
+              <li>Open Studio → <strong>Data Tables</strong> → pencil icon to customise.</li>
+              <li>Specify the exact rows and columns; instruct “not reported” for missing information and require source citations.</li>
+              <li>Generate, then inspect citations and compare a sample of cells with the original PDFs.</li>
+              <li>Use the three-dot menu → <strong>Export to Sheets</strong>. Content goes to one tab and citations to another.</li>
+              <li>Add human-coded columns for theme, inferential weight, contradiction, and thesis use.</li>
+            </ol>
+          </article>
+          <article>
+            <p class="eyebrow">Tutorial B</p>
+            <h2>Create an LR mind map</h2>
+            <ol class="step-list">
+              <li>Select a coherent source set; mixed topics create shallow branches.</li>
+              <li>In Chat, select the <strong>Mind Map</strong> chip.</li>
+              <li>Open the generated map in Studio; expand/collapse branches and select nodes to ask source-grounded questions.</li>
+              <li>Interrogate missing branches: theory, mechanism, method, context, contradiction, and outcome.</li>
+              <li>Download or share the notebook, subject to source restrictions.</li>
+              <li>Redraw the final thesis map yourself so hierarchy reflects your argument, not the tool's frequency patterns.</li>
+            </ol>
+            <p class="source-line"><a href="https://support.google.com/gemininotebook/answer/16212283?hl=en" target="_blank" rel="noreferrer">Official Mind Maps guide</a></p>
+          </article>
+        </div>
+
+        <details class="prompt-library" open><summary>Gemini Notebook prompt: thesis literature matrix</summary><div class="prompt-card"><button class="copy-button" data-copy-target="notebook-matrix-prompt">Copy</button><pre id="notebook-matrix-prompt">Create a data table with one row per included study and these columns:
+1. Full citation exactly as shown in the source
+2. Research question
+3. Theory or conceptual mechanism
+4. Country/institutional context
+5. Data source, period, unit of analysis, and sample size
+6. Outcome and key explanatory variables
+7. Empirical or analytical method
+8. Identification assumptions
+9. Main finding with direction, magnitude, and uncertainty where reported
+10. Authors' stated limitation
+11. My synthesis code: convergence / contradiction / boundary / method issue / contextual relevance
+12. Exact page or section supporting each extracted claim
+
+Use only the selected sources. If an item is absent, write “not reported”; do not infer it. Keep descriptive association separate from causal evidence. Flag any cell whose interpretation is uncertain.</pre></div></details>
+
+        <details class="prompt-library"><summary>Gemini Notebook prompt: argument-centred mind map</summary><div class="prompt-card"><button class="copy-button" data-copy-target="notebook-map-prompt">Copy</button><pre id="notebook-map-prompt">Using only the selected sources, construct a mind-map plan for the literature review on [TOPIC]. Place the research problem at the centre. Use first-level branches for: theories, mechanisms, empirical findings, methods/identification, institutional contexts, contradictions, and unresolved questions. Under each branch, name the supporting sources and distinguish established evidence from author interpretation. Add a “missing or weakly connected evidence” branch. Do not treat citation frequency as evidence strength.</pre></div></details>
+
+        <div class="warning-note"><strong>Verification rule:</strong> Gemini Notebook can be inaccurate, and source import can omit features such as Google-file footnotes or comments. Use the generated table/map as a draft analytical artefact, not as a citable authority.</div>
+        <p class="source-line">Current product guidance: <a href="https://support.google.com/gemininotebook/answer/16206563?hl=en" target="_blank" rel="noreferrer">Create a notebook and Data Tables</a> · <a href="https://support.google.com/gemininotebook/answer/16215270?hl=en" target="_blank" rel="noreferrer">Sources and limitations</a> · <a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noreferrer">NotebookLM rename</a></p>
+      </section>
+
+      <section class="page" id="page-journals" data-title="Journal quality">
+        <div class="page-heading">
+          <p class="section-number">Module 11</p>
+          <h1>Appraise the article and the outlet—never outsource judgement to one metric</h1>
+          <p class="lede">Indexing is useful evidence of editorial screening, not a guarantee that every article is strong. New, regional, or specialised journals can be credible without elite metrics.</p>
+        </div>
+
+        <div class="journal-ladder">
+          <div><span>1</span><strong>Identity</strong><p>Verify title, ISSN, publisher, domain, archive, and contact information. Watch for cloned or confusingly similar titles.</p></div>
+          <div><span>2</span><strong>Process</strong><p>Look for specific peer review, ethics, corrections/retractions, authorship, data, conflicts, and fee policies.</p></div>
+          <div><span>3</span><strong>People</strong><p>Check whether editors are identifiable, qualified, and plausibly involved; sample their institutional pages.</p></div>
+          <div><span>4</span><strong>Trace</strong><p>Verify claims directly in EconLit, DOAJ, Scopus Sources, Web of Science Master Journal List, and relevant Malaysian systems.</p></div>
+          <div><span>5</span><strong>Article</strong><p>Judge question, theory, data, design, transparency, inference, robustness, and reporting—regardless of logo.</p></div>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>Credibility signals</h2>
+            <ul class="tick-list good"><li>Scope and ownership are clear.</li><li>ISSN and journal identity match independent records.</li><li>Peer-review model and editorial policies are specific.</li><li>Fees are disclosed before submission.</li><li>Editorial board members are verifiable.</li><li>Corrections, retractions, and archives are maintained.</li><li>Indexing claims can be confirmed at the indexer's site.</li><li>Published articles show plausible timelines and competent methods.</li></ul>
+          </article>
+          <article>
+            <h2>Red flags requiring investigation</h2>
+            <ul class="tick-list danger"><li>Spam invitation unrelated to your field.</li><li>Guaranteed acceptance or implausibly rapid review.</li><li>Hidden fees or payment demanded after acceptance.</li><li>Fake metrics, invented indexing, or hijacked journal identity.</li><li>Very broad scope with weak editorial expertise.</li><li>Copied website text, broken archives, or unverifiable address.</li><li>Board members who deny involvement or cannot be identified.</li><li>Systematic mismatch between claims, methods, and editorial quality.</li></ul>
+          </article>
+        </div>
+
+        <div class="workbench" id="journal-checker">
+          <div class="workbench-head"><div><p class="eyebrow">Journal triage</p><h2>Evidence-based credibility check</h2></div><span id="journal-result" class="status-chip">Not assessed</span></div>
+          <div class="checklist-columns">
+            <label class="check-row"><input type="checkbox" data-weight="1"> Verified ISSN, publisher, and domain</label>
+            <label class="check-row"><input type="checkbox" data-weight="1"> Transparent peer-review and ethics policies</label>
+            <label class="check-row"><input type="checkbox" data-weight="1"> Real, relevant editorial board</label>
+            <label class="check-row"><input type="checkbox" data-weight="1"> Fees and copyright terms are clear</label>
+            <label class="check-row"><input type="checkbox" data-weight="1"> Indexing verified at the indexer's site</label>
+            <label class="check-row"><input type="checkbox" data-weight="-2"> Guaranteed/very rapid acceptance</label>
+            <label class="check-row"><input type="checkbox" data-weight="-2"> False metric/indexing or cloned identity</label>
+            <label class="check-row"><input type="checkbox" data-weight="-1"> Spam solicitation and scope mismatch</label>
+            <label class="check-row"><input type="checkbox" data-weight="-1"> Hidden charges or vague contact details</label>
+            <label class="check-row"><input type="checkbox" data-weight="-1"> Articles show persistent quality-control failures</label>
+          </div>
+          <p class="small">This is a triage prompt, not a blacklist or verdict. Record the evidence and consult a librarian or field expert when uncertain.</p>
+        </div>
+
+        <div class="source-rack">
+          <a href="https://thinkchecksubmit.org/" target="_blank" rel="noreferrer"><strong>Think. Check. Submit.</strong><span>Interactive trust checklist</span></a>
+          <a href="https://www.aeaweb.org/econlit/" target="_blank" rel="noreferrer"><strong>EconLit</strong><span>Economics-focused index</span></a>
+          <a href="https://doaj.org/apply/guide/" target="_blank" rel="noreferrer"><strong>DOAJ</strong><span>Open-access transparency criteria</span></a>
+          <a href="https://www.elsevier.com/en-gb/products/scopus/content" target="_blank" rel="noreferrer"><strong>Scopus Sources</strong><span>Active and discontinued title lists</span></a>
+          <a href="https://mjl.clarivate.com/" target="_blank" rel="noreferrer"><strong>Master Journal List</strong><span>Web of Science coverage</span></a>
+          <a href="https://rms.mohe.gov.my/" target="_blank" rel="noreferrer"><strong>MySitasi</strong><span>Malaysian scholarly publishing repository</span></a>
+        </div>
+      </section>
+
+      <section class="page" id="page-ai-writing" data-title="AI writing clinic">
+        <div class="page-heading">
+          <p class="section-number">Module 12</p>
+          <h1>Spot AI-shaped prose by its evidential behaviour, not a magic word list</h1>
+          <p class="lede">Style clues can trigger questions, but they do not prove authorship. The strongest audit tests citation custody, source fidelity, conceptual precision, and the writer's ability to explain decisions.</p>
+        </div>
+
+        <div class="slop-categories">
+          <article><span>Language</span><h3>Lexical clichés</h3><p>“Delve,” “tapestry,” “landscape,” “realm,” “multifaceted,” “pivotal,” “robust,” “nuanced,” “underscore,” “shed light,” “ever-evolving.”</p><p class="small">A word is not evidence. Look for clustering and misfit.</p></article>
+          <article><span>Structure</span><h3>Template cadence</h3><p>Repeated triads, mirrored paragraphs, mechanical headings, “not only…but also,” forced contrasts, recap after every short section.</p></article>
+          <article><span>Evidence</span><h3>Citation theatre</h3><p>Nonexistent references; real citations attached to wrong claims; page-free quotations; vague “studies show”; precise numbers without traceable sources.</p></article>
+          <article><span>Reasoning</span><h3>Analytical emptiness</h3><p>Generic praise/criticism, no magnitude, no design distinction, causality from correlation, contradictions smoothed into “mixed findings.”</p></article>
+          <article><span>Voice</span><h3>Unearned authority</h3><p>High certainty without evidence, universal policy prescriptions, fabricated consensus, abrupt expertise beyond the writer's demonstrated command.</p></article>
+          <article><span>Formatting</span><h3>Tool residue</h3><p>Placeholder brackets, chat preambles, markdown remnants, fake links/DOIs, inconsistent citation styles, unexplained tables, or repeated concluding slogans.</p></article>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>The viva-style authorship check</h2>
+            <ol class="compact-steps"><li>Ask the writer to retrieve the source behind a randomly selected claim.</li><li>Ask why two studies were grouped and a third excluded.</li><li>Ask what changed between matrix, outline, and draft.</li><li>Ask which evidence most seriously threatens the paragraph's claim.</li><li>Inspect notes, version history, prompts, and correction log where policy permits.</li></ol>
+          </article>
+          <article>
+            <h2>Revise AI-shaped prose</h2>
+            <ul class="tick-list"><li>Replace generic topic sentences with falsifiable synthesis claims.</li><li>Attach every claim to verified evidence and locators.</li><li>State effect direction, magnitude, uncertainty, and design.</li><li>Name the mechanism linking evidence to interpretation.</li><li>Preserve disagreement and boundary conditions.</li><li>Delete transitions that do no logical work.</li><li>Read aloud for repetitive rhythm and inflated diction.</li></ul>
+          </article>
+        </div>
+
+        <div class="warning-note"><strong>Fairness warning:</strong> AI detectors can misclassify human and AI-assisted text and should not be the sole basis for adverse action. Turnitin itself requires human judgement; published studies report reliability and fairness problems, particularly in some non-native-English settings.</div>
+
+        <div class="worksheet">
+          <div><p class="eyebrow">Worksheet 3</p><h2>Prose forensic audit</h2></div>
+          <div class="worksheet-grid">
+            <label>Claim selected for audit<textarea data-save="ai-claim" placeholder="Paste one sentence."></textarea></label>
+            <label>Source and locator<textarea data-save="ai-source" placeholder="Verified source, page/section/table."></textarea></label>
+            <label>Reasoning or design problem<textarea data-save="ai-problem" placeholder="What is vague, unsupported, causal, generic, or mismatched?"></textarea></label>
+            <label>Rewritten sentence<textarea data-save="ai-rewrite" placeholder="Rewrite with bounded claim, evidence, and uncertainty."></textarea></label>
+          </div>
+        </div>
+        <p class="source-line">Caution: <a href="https://guides.turnitin.com/hc/en-us/articles/22774058814093-Using-the-AI-Writing-Report" target="_blank" rel="noreferrer">Turnitin AI report limitations</a> · <a href="https://arxiv.org/abs/2304.02819" target="_blank" rel="noreferrer">Detector bias study</a> · <a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" target="_blank" rel="noreferrer">UNESCO guidance</a></p>
+      </section>
+
+      <section class="page" id="page-teaching" data-title="Teaching kit">
+        <div class="page-heading">
+          <p class="section-number">Module 13</p>
+          <h1>Instructor-ready seminars, tutorials, and assessment</h1>
+          <p class="lede">Use the modules independently or as a four-session sequence. Student inputs are stored locally and can be exported as a Markdown learning log.</p>
+        </div>
+
+        <div class="teaching-sequence">
+          <article><span>Seminar 1 · 120 min</span><h2>Find and bound the field</h2><p><strong>Before:</strong> one-page problem statement. <strong>In class:</strong> concept blocks, Scholar query tournament, sentinel-paper test, screening criteria. <strong>Exit:</strong> search protocol and search log.</p></article>
+          <article><span>Seminar 2 · 120 min</span><h2>From reading to synthesis</h2><p><strong>Before:</strong> six papers in a matrix. <strong>In class:</strong> catalogue diagnosis, CECIB rewrite, contradiction mapping, evidence weighting. <strong>Exit:</strong> two synthesis paragraphs and a matrix revision.</p></article>
+          <article><span>Seminar 3 · 120 min</span><h2>Gap and framework clinic</h2><p><strong>Before:</strong> one gap claim and one diagram. <strong>In class:</strong> gap objections, theory→concept→measure chain, arrow audit, framework choice. <strong>Exit:</strong> defensible gap and integrated framework.</p></article>
+          <article><span>Seminar 4 · 120 min</span><h2>AI, integrity, and chapter defence</h2><p><strong>Before:</strong> AI-assisted extraction plus correction log. <strong>In class:</strong> hallucinated citation hunt, source-custody viva, prose forensics, journal triage. <strong>Exit:</strong> AI disclosure and chapter quality plan.</p></article>
+        </div>
+
+        <div class="content-grid equal">
+          <article>
+            <h2>Chapter 2 rubric (100)</h2>
+            <div class="rubric"><div><span>20</span><p><strong>Coverage and transparency</strong><br>Appropriate sources, documented search, justified boundaries.</p></div><div><span>20</span><p><strong>Critical synthesis</strong><br>Argument across studies, design-aware comparisons, counter-evidence.</p></div><div><span>15</span><p><strong>Theoretical command</strong><br>Mechanisms, assumptions, rival predictions, operational implications.</p></div><div><span>15</span><p><strong>Malaysian/contextual analysis</strong><br>Institutional translation, local evidence, transferability.</p></div><div><span>15</span><p><strong>Gap and contribution</strong><br>Warranted, consequential, bounded, answerable.</p></div><div><span>10</span><p><strong>Framework alignment</strong><br>Problem–RQ–theory–variable–method coherence.</p></div><div><span>5</span><p><strong>Scholarly integrity</strong><br>Accurate citations, source custody, transparent AI use.</p></div></div>
+          </article>
+          <article>
+            <h2>Supervisor conference questions</h2>
+            <ol class="compact-steps"><li>What is the chapter's one-sentence argument?</li><li>Which literature is outside scope, and why?</li><li>Which three studies most constrain the thesis claim?</li><li>Where does evidence disagree, and what explains it?</li><li>What is known internationally but uncertain in Malaysia?</li><li>Which theory gives each major arrow in the framework?</li><li>What finding would make the gap disappear?</li><li>What changed after AI output was checked?</li></ol>
+          </article>
+        </div>
+
+        <div class="export-panel">
+          <div><p class="eyebrow">Student portfolio</p><h2>Export saved worksheets</h2><p>Downloads all saved text areas plus current completion status as a Markdown file.</p></div>
+          <button class="primary-button" id="export-workbook">Download learning log</button>
+        </div>
+
+        <div class="quality-checklist">
+          <h2>Submission readiness checklist</h2>
+          <div class="checklist-columns">
+            <label class="check-row"><input type="checkbox" data-save-check="ready-1"> Scope and review method are explicit.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-2"> Search strings, dates, sources, and criteria are logged.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-3"> Seminal and recent work are both represented.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-4"> Sections are organised by argument, not author.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-5"> Methods and contexts explain divergent findings.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-6"> Malaysian evidence is integrated analytically.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-7"> Gap follows from evidence and matches the design.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-8"> Every framework arrow has theory and measurement.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-9"> Citations, quotations, and locators are verified.</label>
+            <label class="check-row"><input type="checkbox" data-save-check="ready-10"> AI use is disclosed and source custody is retained.</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-sources" data-title="Sources & glossary">
+        <div class="page-heading">
+          <p class="section-number">Module 14</p>
+          <h1>Sources, standards, and working glossary</h1>
+          <p class="lede">Primary and authoritative links used to update this teaching dashboard, plus the professor's supplied lecture notes.</p>
+        </div>
+
+        <div class="sources-list">
+          <h2>Search and review reporting</h2>
+          <a href="https://scholar.google.com/intl/en/scholar/help.html" target="_blank" rel="noreferrer"><strong>Google Scholar Search Help</strong><span>Author/title searching, date filters, alerts, full text, cited-by and related-article chaining.</span></a>
+          <a href="https://www.prisma-statement.org/prisma-2020" target="_blank" rel="noreferrer"><strong>PRISMA 2020</strong><span>Reporting guideline, checklists, and flow diagrams for systematic reviews.</span></a>
+          <a href="https://www.prisma-statement.org/prisma-search" target="_blank" rel="noreferrer"><strong>PRISMA-S</strong><span>Sixteen items for transparently reporting literature searches.</span></a>
+          <a href="https://www.aeaweb.org/econlit/" target="_blank" rel="noreferrer"><strong>AEA EconLit</strong><span>Economics bibliography covering articles, working papers, dissertations, books, and chapters.</span></a>
+          <a href="https://www.aeaweb.org/econlit/jelCodes.php" target="_blank" rel="noreferrer"><strong>JEL classification</strong><span>Standard economics subject vocabulary for query expansion and coding.</span></a>
+
+          <h2>Gemini Notebook and AI-assisted research</h2>
+          <a href="https://support.google.com/gemininotebook/answer/16206563?hl=en" target="_blank" rel="noreferrer"><strong>Create a Gemini Notebook</strong><span>Studio, Data Tables, export, reports, and source organisation.</span></a>
+          <a href="https://support.google.com/gemininotebook/answer/16212283?hl=en" target="_blank" rel="noreferrer"><strong>Gemini Notebook Mind Maps</strong><span>Generate, navigate, question, download, and share maps.</span></a>
+          <a href="https://support.google.com/gemininotebook/answer/16215270?hl=en" target="_blank" rel="noreferrer"><strong>Gemini Notebook sources</strong><span>Supported inputs, limits, syncing, web-source constraints, and caveats.</span></a>
+          <a href="https://www.semanticscholar.org/product" target="_blank" rel="noreferrer"><strong>Semantic Scholar</strong><span>AI-assisted discovery, citation context, library folders, recommendations, and alerts.</span></a>
+          <a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" target="_blank" rel="noreferrer"><strong>UNESCO GenAI guidance</strong><span>Human-centred, ethical, and educational governance principles.</span></a>
+
+          <h2>Journal trust and indexing</h2>
+          <a href="https://thinkchecksubmit.org/" target="_blank" rel="noreferrer"><strong>Think. Check. Submit.</strong><span>Cross-sector checklist for assessing journals and publishers.</span></a>
+          <a href="https://doaj.org/apply/transparency/" target="_blank" rel="noreferrer"><strong>Transparency and Best Practice</strong><span>COPE/DOAJ/OASPA/WAME principles for scholarly publishing.</span></a>
+          <a href="https://www.elsevier.com/en-gb/products/scopus/content" target="_blank" rel="noreferrer"><strong>Scopus content and sources</strong><span>Source-title lists, selection, discontinued titles, and coverage.</span></a>
+          <a href="https://mjl.clarivate.com/" target="_blank" rel="noreferrer"><strong>Web of Science Master Journal List</strong><span>Independent verification of Web of Science coverage.</span></a>
+          <a href="https://rms.mohe.gov.my/" target="_blank" rel="noreferrer"><strong>Malaysia MySitasi</strong><span>MOHE's integrated Malaysian scholarly publication repository, replacing MyJurnal/MyCite/MyJMS.</span></a>
+
+          <h2>AI-writing evidence</h2>
+          <a href="https://guides.turnitin.com/hc/en-us/articles/22774058814093-Using-the-AI-Writing-Report" target="_blank" rel="noreferrer"><strong>Turnitin AI Writing Report guide</strong><span>States that detection may be inaccurate and must not be the sole basis for adverse action.</span></a>
+          <a href="https://arxiv.org/abs/2304.02819" target="_blank" rel="noreferrer"><strong>Liang et al. on detector bias</strong><span>Evidence of false positives affecting non-native English writing in tested detectors.</span></a>
+
+          <h2>Supplied teaching references</h2>
+          <div class="local-source"><strong>allthings-Chapter2.docx</strong><span>Chapter outline, search routes, thematic/funnelled writing, summary tables, good/bad examples, Malaysian synthesis, and brain-drain debate.</span></div>
+          <div class="local-source"><strong>theoretical framework eg.docx</strong><span>Hand-drawn theory → concept → construct/variable maps for wage determination and high-skilled migration.</span></div>
+          <div class="local-source"><strong>my RF diagrams.pdf</strong><span>Research-framework examples connecting problem, objectives, data, method, output, recommendations, and policy outcomes.</span></div>
+        </div>
+
+        <div class="glossary">
+          <h2>Working glossary</h2>
+          <dl><div><dt>Bibliography</dt><dd>Works consulted; not necessarily cited. A reference list contains works cited in the text.</dd></div><div><dt>Citation chaining</dt><dd>Backward search through references and forward search through citing works.</dd></div><div><dt>Construct</dt><dd>An abstract concept represented through one or more measures.</dd></div><div><dt>Evidence gap</dt><dd>A consequential uncertainty demonstrated by the reviewed evidence.</dd></div><div><dt>Identification</dt><dd>The assumptions and variation that allow a parameter or causal effect to be learned from data.</dd></div><div><dt>Mechanism</dt><dd>The process through which an explanatory factor generates an outcome.</dd></div><div><dt>Sentinel paper</dt><dd>A known relevant study used to test whether a search strategy has adequate recall.</dd></div><div><dt>Synthesis</dt><dd>An integrated claim about a body of evidence, including convergence, heterogeneity, contradiction, and limits.</dd></div></dl>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="search-dialog" id="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+    <div class="search-card">
+      <div class="search-head"><div><p class="eyebrow">Search the dashboard</p><h2 id="search-title">Find a concept, tool, or exercise</h2></div><button class="icon-button" id="search-close" aria-label="Close search">×</button></div>
+      <input id="site-search" type="search" placeholder="Try “Boolean”, “framework”, “predatory”, or “gap”…" autocomplete="off">
+      <div id="search-results" class="search-results"><p>Start typing to search all modules.</p></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
